@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+body {
+  background-color: #010a1c;
+}
+
+.showcase {
+  background-color: #bc4558;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px 30px;
+  box-shadow: rgb(192, 168, 168) 0px 4px 12px;
+  opacity: 1;
+}
+.showcase h1 {
+  font-size: 40px;
+}
+
+nav {
+  background: #013766;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8vh;
+  width: 100%;
+}
+
+/* logo */
+.logo {
+  font-size: 3em;
+  letter-spacing: 5px;
+  margin-right: auto;
+  margin-left: 5rem;
+}
+
+/* nav-links */
+nav ul {
+  display: flex;
+  width: 40%;
+  justify-content: space-around;
+  list-style: none;
+  margin-right: 2rem;
+}
+
+nav ul a {
+  font-size: 14px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  padding: 10px;
+  border-bottom: 1.5px solid transparent;
+  transition: all 0.5s ease;
+}
+
+nav ul a.active,
+nav ul a:hover {
+  border-color: #bc4558;
+  color: #bc4558;
+  transition: 0.5s;
+}
+
+.menubtn {
+  font-size: 30px;
+  cursor: pointer; /* The cursor is a pointer and indicates a link */
+  display: none;
+  margin-right: 3rem;
+}
+
+#click {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 920px) {
+  .menubtn {
+    display: block;
+  }
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 35%;
+    position: fixed;
+    background: #0a3e6b;
+    z-index: 1;
+    top: 8vh;
+    right: -100%;
+    margin: auto;
+    transition: all 0.5s;
+  }
+  nav ul li {
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0;
+  }
+  #click:checked ~ ul {
+    right: 0;
+  }
+}
